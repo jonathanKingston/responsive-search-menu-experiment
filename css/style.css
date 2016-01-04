@@ -1,0 +1,104 @@
+body {
+  font: 14px "Ubuntu", sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.main-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%
+}
+.main-menu ul a:hover,
+  .main-menu ul a:focus {
+  background-color: rgb(210, 210, 210);
+}
+.main-menu a {
+  display: block;
+  color: #111;
+  text-decoration: none;
+  padding: 16px;
+  padding: 1rem;
+  background: #eee;
+}
+.main-menu li {
+  list-style-type: none;
+}
+.main-menu.open .menu-button {
+  background-color: #6bbbea;
+}
+.main-menu.open .drawer {
+  max-height: 200px;
+  max-height: 12.5rem
+}
+.main-menu.open .drawer ul {
+  max-height: 160px;
+  max-height: 10rem;
+}
+.main-menu.open input[type="search"] {
+  display: block;
+  width: 100%;
+}
+.main-menu .menu-button {
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  background: #222;
+  color: #fff;
+  width: 40px;
+  width: 2.5rem;
+  height: 40px;
+  height: 2.5rem;
+  padding: 11.2px 3.2px;
+  padding: 0.7rem 0.2rem;
+  outline: 0;
+}
+.legacy .main-menu .drawer {
+  max-height: 100%;
+  overflow: visible;
+}
+.main-menu .drawer {
+  max-height: 0;
+  -webkit-transition: max-height 0.25s ease-out;
+  transition: max-height 0.25s ease-out;
+  overflow: hidden
+}
+.main-menu .drawer ul {
+  overflow: auto;
+}
+.legacy .main-menu .menu-button {
+  display: none;
+}
+.main-menu input[type="search"] {
+  display: none;
+  height: 40px;
+  height: 2.5rem;
+}
+
+@media screen and (min-width: 39rem) {
+  .main-menu .drawer {
+    max-height: inherit;
+    overflow: auto
+  }
+  .main-menu .drawer li {
+    float: right;
+  }
+  .main-menu .drawer ul {
+    overflow: auto;
+  }
+  .main-menu .menu-button {
+    display: none;
+  }
+  .main-menu input[type="search"] {
+    display: block;
+    float: left;
+  }
+}
