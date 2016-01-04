@@ -71,9 +71,13 @@ gulp.task('other', function () {
   )
 });
 
-gulp.task('default', function () {
+gulp.task('build', function () {
   runSequence(
     ['clean'],
-    ['scripts', 'other', 'css', 'watch']
+    ['scripts', 'other', 'css']
   )
 });
+
+gulp.task('build-watch', ['build', 'watch']);
+
+gulp.task('default', ['build']);
