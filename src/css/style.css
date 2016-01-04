@@ -1,0 +1,16 @@
+body {
+  font: 14px "Ubuntu", sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@import 'variables.css';
+@import 'menu.css';

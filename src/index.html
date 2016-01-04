@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="legacy">
+  <head>
+    <link href="css/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <h1>Menu Experiment</h1>
+    <nav class="main-menu">
+      <a class="menu-button" href="#menu" aria-hidden="true" >Menu</a>
+      <div class="drawer">
+        <input type="search" placeholder="Search website" />
+        <div class="no-results hide">
+          No results found
+        </div>
+        <ul class="search-results hide">
+        </ul>
+        <ul class="default-items">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">How we work</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <script type="application/json" id="scope">
+    {
+      "pages": [
+        {
+          "href": "#",
+          "text": "About"
+        },
+        {
+          "href": "#",
+          "text": "Contact"
+        },
+        {
+          "href": "#",
+          "text": "How we work"
+        },
+        {
+          "href": "#",
+          "text": "Terms and conditions"
+        }
+      ]
+    }
+    </script>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
