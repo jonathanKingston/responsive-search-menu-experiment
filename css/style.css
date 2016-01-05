@@ -11,11 +11,30 @@ body {
   padding: 0;
   margin: 0;
 }
+
+p {
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+
+code {
+  display: block;
+  background: #eee;
+  padding: 16px;
+  padding: 1rem;
+  border: 1px solid #C4C4C4;
+  border-radius: 2px;
+  margin: 4.8px;
+  margin: 0.3rem;
+}
 .main-menu {
   position: absolute;
   top: 0;
   right: 0;
   width: 100%
+}
+.main-menu .no-results {
+  background: #fff;
 }
 .main-menu ul a:hover,
   .main-menu ul a:focus {
@@ -79,8 +98,16 @@ body {
 }
 .main-menu input[type="search"] {
   display: none;
+  width: 160px;
+  width: 10rem;
   height: 40px;
   height: 2.5rem;
+  background: url(../svg/magnifying-glass.svg) 3.2px 50% no-repeat #fff;
+  background: url(../svg/magnifying-glass.svg) 0.2rem 50% no-repeat #fff;
+  background-size: 1rem;
+  border: 1px solid #333;
+  padding: 0 0 0 20.8px;
+  padding: 0 0 0 1.3rem;
 }
 
 @media screen and (min-width: 39rem) {
@@ -88,8 +115,17 @@ body {
     max-height: inherit;
     overflow: auto
   }
-  .main-menu .drawer li {
+  .main-menu .drawer .default-items {
+    display: block
+  }
+  .main-menu .drawer .default-items li {
     float: right;
+  }
+  .main-menu .drawer .search-results, .main-menu .drawer .no-results {
+    width: 10rem;
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
   }
   .main-menu .drawer ul {
     overflow: auto;
@@ -97,8 +133,11 @@ body {
   .main-menu .menu-button {
     display: none;
   }
+  .main-menu a {
+    padding: 0.75rem;
+  }
   .main-menu input[type="search"] {
     display: block;
-    float: left;
+    float: right;
   }
 }

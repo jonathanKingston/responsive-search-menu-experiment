@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <h1>Menu Experiment</h1>
     <nav class="main-menu">
       <a class="menu-button" href="#menu" aria-hidden="true" >Menu</a>
       <div class="drawer">
@@ -22,6 +21,40 @@
         </ul>
       </div>
     </nav>
+    <h1>Responsive search menu experiment</h1>
+
+<h2>Why</h2>
+
+<p>The idea is to create a menu that works at all screen sizes, browser support etc. Once the menu is open the user is able to use the sites search functionality to filter the navigation.</p>
+
+<p>This was an idea I had after reading <a href="abookapart.com/products/responsive-design-patterns-principles">Ethan Marcotte&#39;s Responsive Design: Patterns &amp; Principles</a>.</p>
+
+<h2>What</h2>
+
+<p><em>On mobile</em> the user should be presented with a hidden menu, on reveal of the menu the user should be focused on searching allowing instant typing and also the primary menu. When the user types it changes the menu items to match the result of the search.</p>
+
+<p><em>On desktop</em> the user should see both default menu and search results at the same time, no menu item needed.</p>
+
+<h1>Demo</h1>
+
+<p><a href="http://jonathankingston.github.io/responsive-search-menu-experiment">See a demo here</a></p>
+
+<h2>Bugs</h2>
+
+<p>Feel free to raise any issues etc on <a href="https://github.com/jonathanKingston/responsive-search-menu-experiment/">GitHub</a>, this has not been tested at all really.</p>
+
+<h2>Running etc</h2>
+
+<p>To build the site:
+<code>
+npm install
+make build
+</code></p>
+
+<p>To serve(localhost:8080):
+<code>
+make serve
+</code></p>
 
     <script type="application/json" id="scope">
     {
@@ -41,6 +74,10 @@
         {
           "href": "#",
           "text": "Terms and conditions"
+        },
+        {
+          "href": "#products",
+          "text": "Products"
         }
       ]
     }
