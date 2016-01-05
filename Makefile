@@ -13,11 +13,11 @@ deploy: build
 	rm -rf $(build_tmp)
 	mkdir -p $(build_tmp)
 	cp -r build/* $(build_tmp)
-	git checkout --orphan gh-pages
-	git clean -df
-	git rm -r --cached .
+	cp .gitignore $(build_tmp)
+	git checkout gh-pages
+	git rm -r .
 	#(for x in $$(find $$build_tmp -type f -printf '%P\n'); do git add "$$x"; done);
-	cp $(build_tmp) .
+	cp $(build_tmp)* .
 	git add .
 	git commit -m "latest deploy"
 	git push -f
