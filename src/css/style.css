@@ -12,5 +12,18 @@ body {
   margin: 0;
 }
 
+p {
+  margin-bottom: 1rem;
+}
+
+code {
+  display: block;
+  background: #eee;
+  padding: 1rem;
+  border: 1px solid #C4C4C4;
+  border-radius: 2px;
+  margin: 0.3rem;
+}
+
 @import 'variables.css';
 @import 'menu.css';

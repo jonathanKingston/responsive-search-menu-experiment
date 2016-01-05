@@ -1,7 +1,9 @@
 :root {
   --main-color: #6bbbea;
+  --main-background-color: #fff;
   --feature-background-color: #eee;
   --feature-color: #111;
   --search-height: 2.5rem;
   --menu-height: 10rem;
+  --search-width: 10rem;
 }

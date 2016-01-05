@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <h1>Menu Experiment</h1>
     <nav class="main-menu">
       <a class="menu-button" href="#menu" aria-hidden="true" >Menu</a>
       <div class="drawer">
@@ -22,6 +21,7 @@
         </ul>
       </div>
     </nav>
+    @@include(markdown('../README.md'))
 
     <script type="application/json" id="scope">
     {
@@ -41,6 +41,10 @@
         {
           "href": "#",
           "text": "Terms and conditions"
+        },
+        {
+          "href": "#products",
+          "text": "Products"
         }
       ]
     }

@@ -6,7 +6,12 @@
 
   & input[type="search"] {
     display: none;
+    width: var(--search-width);
     height: var(--search-height);
+    background: url(../svg/magnifying-glass.svg) 0.2rem 50% no-repeat var(--main-background-color);
+    background-size: 1rem;
+    border: 1px solid #333;
+    padding: 0 0 0 1.3rem;
   }
 
   .legacy & .menu-button {
@@ -33,7 +38,7 @@
     right: 0;
     border-radius: 50%;
     background: #222;
-    color: #fff;
+    color: var(--main-background-color);
     width: var(--search-height);
     height: var(--search-height);
     padding: 0.7rem 0.2rem;
@@ -72,13 +77,20 @@
   & ul a:focus {
     background-color: color(var(--feature-background-color) blackness(20%));
   }
+
+  & .no-results {
+    background: var(--main-background-color);
+  }
 }
 
 @media screen and (min-width: 39rem) {
   .main-menu {
     & input[type="search"] {
       display: block;
-      float: left;
+      float: right;
+    }
+    & a {
+      padding: 0.75rem;
     }
     & .menu-button {
       display: none;
@@ -89,8 +101,17 @@
       & ul {
         overflow: auto;
       }
-      & li {
-        float: right;
+      & .search-results, & .no-results {
+        width: var(--search-width);
+        position: absolute;
+        top: 2.5rem;
+        right: 0;
+      }
+      & .default-items {
+        display: block;
+        & li {
+          float: right;
+        }
       }
     }
   }

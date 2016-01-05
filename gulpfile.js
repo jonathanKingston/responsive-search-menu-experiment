@@ -10,11 +10,13 @@ const browserify = require('browserify');
 const runSequence = require('run-sequence');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
+const fileinclude = require('gulp-file-include');
+const  markdown = require('markdown');
 
 var paths = {
   css: ['src/**/*.css'],
   scripts: ['src/**/*.js'],
-  other: ['src/*.html']
+  other: ['node_modules/open-iconic/**/*.svg', 'src/*.html']
 };
 
 gulp.task('clean', function () {
@@ -67,6 +69,11 @@ gulp.task('scripts', function() {
 gulp.task('other', function () {
   return (
     gulp.src(paths.other)
+    .pipe(fileinclude({
+      filters: {
+        markdown: markdown.parse
+      }
+    }))
     .pipe(gulp.dest('build/'))
   )
 });
