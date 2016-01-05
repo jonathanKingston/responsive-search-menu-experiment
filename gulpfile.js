@@ -35,10 +35,8 @@ gulp.task('css', function () {
     .pipe(postcss([
       require("postcss-import")(),
       require("postcss-url")(),
-      require("postcss-nesting")(),
       require("postcss-cssnext")({
         features: {
-          nesting: false
         }
       }),
       require("postcss-browser-reporter")(),
