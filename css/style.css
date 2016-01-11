@@ -67,6 +67,10 @@ code {
   width: 100%;
 }
 .main-menu .menu-button {
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
   position: absolute;
   right: 0;
   border-radius: 50%;
