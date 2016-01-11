@@ -1,4 +1,4 @@
-build_tmp = ../tmp/menuexperimentbuild/;
+build_tmp = ../tmp/menuexperimentbuild/
 
 clean:
 	rm -rf build
